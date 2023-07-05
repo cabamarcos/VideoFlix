@@ -3,6 +3,7 @@
 **Para acceder a las dos interfaces ejecutad los siguientes comandos en una terminal dentro de la carpeta:**
 
 npm install
+
 npm run dev
 
 Una vez se ejecutan dichos comando aparecerán los enlaces en la terminal con los cuales pueden acceder a la web y el mando.
