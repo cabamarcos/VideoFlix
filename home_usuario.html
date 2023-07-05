@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!-- Lengua en el que está escrita la página -->
+<html lang="en">
+<head>
+  <!-- Codificación de los caracteres de Unicode -->
+  <meta charset="UTF-8">
+  <!-- Breve descripción de la empresa -->
+  <meta name="description" content="Vivid">
+
+  <!-- Para que la página sea responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- título de la página, esto sirve para identificación del archivo -->
+  <title>Home</title>
+
+    <!-- Favicon, para que al lado del nombre del archivo salga nuestro logo-->
+  <link rel="apple-touch-icon" sizes="32x32" href="images/favicons/favicon.png">
+
+  <!--  <link rel="manifest" href="/manifest.json">-->
+  <script src="https://kit.fontawesome.com/cb1b141342.js" crossorigin="anonymous"></script>
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+
+  <!--Enlazamos esta página con su correspondiente hoja de estilos; home.css-->
+  <link rel="stylesheet" href="style/home_user.css">
+  <link rel="stylesheet" href="style/responsive.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+</head>
+
+<body>
+<!-- Este es el container principal en donde pondremos márgenes de ser necesario-->
+<div class="container">
+  <!--Esta es la caja para nuestro nav bar vertical que ocupará un 25%-->
+  <nav class="nav-vertical">
+    <div class="logo-nombre">
+      <figure class="logo-box">
+        <!--Aquí situaremos nuestro logo, ocupará un pequeño espacio del div-->
+        <img src="images/logo.PNG" alt="logo_VIVID" onclick="home()">
+      </figure>
+
+      <!-- Efecto obtenido de: https://codepen.io/web-tiki/pen/YNKMpB
+      modificaciones de color y tipo de letra -->
+      <svg id="nombre" viewbox="15 0 80 20" onclick="home()">
+        <defs>
+          <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="#8F0058"/>
+            <stop offset="95%" stop-color="#FAAB00"/>
+          </linearGradient>
+
+          <linearGradient id="gradient2" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="#292567"/>
+            <stop offset="95%" stop-color="#FAAB00"/>
+          </linearGradient>
+
+          <linearGradient id="gradient3" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="#00A8A3"/>
+            <stop offset="95%" stop-color="#FAAB00"/>
+          </linearGradient>
+
+          <linearGradient id="gradient4" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="#FAAB00"/>
+            <stop offset="95%" stop-color="#FAAB00"/>
+          </linearGradient>
+
+          <linearGradient id="gradient5" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="#E05000"/>
+            <stop offset="95%" stop-color="#FAAB00"/>
+          </linearGradient>
+
+
+        </defs>
+        <text text-anchor="middle" x="50" y="15" font-size="17">
+          <tspan fill="url(#gradient)"  fill-opacity="0.9">V</tspan>
+          <tspan fill="url(#gradient2)"  fill-opacity="0.9">I</tspan>
+          <tspan fill="url(#gradient3)"  fill-opacity="0.9">V</tspan>
+          <tspan fill="url(#gradient4)"  fill-opacity="0.9">I</tspan>
+          <tspan fill="url(#gradient5)"  fill-opacity="0.9">D</tspan>
+        </text>
+      </svg>
+
+
+    </div>
+
+    <div class="enlaces">
+
+
+      <!--Al hacer click se abrirá la politica de privacidad en otra página-->
+      <div class="menu-opciones">
+        <div class="menu-opciones-box">
+          <img src="images/home.png" alt="Home icono">
+          <!--Este enlace te lleva a Home-->
+          <p onclick="home()"> Home<br></p>
+        </div>
+        <div class="menu-opciones-box">
+          <img src="images/boulder.png" alt="Boulder icono">
+          <!--Este enlace te lleva a la altura de Boulder en la pagina -->
+          <p onclick="categoria(0)"> Boulder<br></p>
+        </div>
+        <div class="menu-opciones-box">
+          <img src="images/equitacion.png" alt="Equitacion icono">
+          <!--Este enlace te lleva a la altura de Equitación en la pagina -->
+          <p onclick="categoria(1)"> Equitacion<br></p>
+        </div>
+        <div class="menu-opciones-box">
+          <img src="images/formula.png" alt="Formula 1 icono">
+          <!--Este enlace te lleva a Formula 1-->
+          <p onclick="categoria(2)"> Formula 1<br></p>
+        </div>
+
+
+      </div>
+
+      <div class="politicas">
+
+        <p> © Vivid 2023 - <br> </p>
+        <p> All Rights Reserved <br></p>
+        <p><i class="fa-solid fa-phone"></i><a href="contacto.html"> Contacto <br></a></p>
+        <p><a href="privacidad.html"> Política de Privacidad <br></a></p>
+
+      </div>
+    </div>
+
+  </nav>
+
+
+  <div class="dcha">
+
+    <!--Este es el menú en donde los usuarios podrán clicar para buscar -->
+    <div class="barra-sign-in-container">
+      <ul>
+        <li>
+          <i id="movil_user" class="material-icons">menu</i>
+        </li>
+      </ul>
+
+
+    </div>
+
+    <div id="contenido">
+
+      <div id="enlaces-movil">
+        <div class="menu-opciones">
+          <div class="menu-opciones-box">
+            <img src="images/home.png" alt="Home icono">
+            <!--Este enlace te lleva a Home-->
+            <p onclick="home()"> Home<br></p>
+          </div>
+          <div class="menu-opciones-box">
+            <img src="images/boulder.png" alt="Boulder icono">
+            <!--Este enlace te lleva a Boulder-->
+            <p onclick="categoria(0)"> Boulder<br></p>
+          </div>
+          <div class="menu-opciones-box">
+            <img src="images/equitacion.png" alt="Equitacion icono">
+            <!--Este enlace te lleva a Equitacion-->
+            <p onclick="categoria(1)"> Equitacion<br></p>
+          </div> 
+          <div class="menu-opciones-box">
+            <img src="images/formula.png" alt="Formula 1 icono">
+            <!--Este enlace te lleva a Formula 1-->
+            <p onclick="categoria(2)"> Formula 1<br></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="path">
+        <h2>
+          Home
+        </h2>
+      </div>
+          <!-- Este div tan solo tiene un texto para mostrar cuáles son nuestras categorías-->
+          <div class="frase-explicativa">
+            <h1>Nuestros seleccionados</h1>
+          </div>
+
+          <!--Titulo para indicar que la primera categoria es Boulder-->
+          <div id= "categoria-Boulder" class="categoria">
+            <h1>🧗🏻‍♀️ Boulder</h1>
+          </div>
+
+          <div class="boulder" id="Boulder">
+            <!-- Vamos a utilizar la clase caratula para todos porque queremos que todos preserven
+            el mismo estilo-->
+
+            <!-- Video 1 boulder -->
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video"src="/videos/boulder/escalada1.mp4" poster="/videos/boulder/poster/escalada1.jpg" alt="Video escaladora 1"controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+                </p>
+              </div>
+              <div class="titulo_artista"><h2>Boulder</h2></div>
+              <div class="title"><p>Ejercicio de Compresión</p></div>
+            </div>
+            <!-- Video 2 boulder -->
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video" src="/videos/boulder/escalada2.mp4" poster="/videos/boulder/poster/escalada2.jpg" alt="Video escaladora 2"controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+                </p>
+              </div>
+              <div class="titulo_artista"><h2>Boulder</h2></div>
+              <div class="title"><p>Ejercicio de Torsión</p></div>
+
+            </div>
+            <!-- Video 3 boulder --> 
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video" src="/videos/boulder/escalada3.mp4" poster="/videos/boulder/poster/escalada4.jpg" alt="Video escaladora 3"controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+                
+                </p>
+
+              </div>
+              <div class="titulo_artista"><h2>Boulder</h2></div>
+              <div class="title"><p>Ejercio de Fuerza 1</p></div>
+
+            </div>
+            <!-- Video 4 boulder -->
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video" src="/videos/boulder/escalada4.mp4" poster="/videos/boulder/poster/escalada3.jpg" alt="Video escalador 4"controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+                  
+                </p>
+
+              </div>
+              <div class="titulo_artista"><h2>Boulder</h2></div>
+              <div class="title"><p>Ejercio de Fuerza 2</p></div>
+
+            </div>
+
+          </div>
+
+
+
+          <!--Titulo para indicar que la segunda categoria es Equitacion-->
+          <div id= "categoria-Equitacion" class="categoria">
+            <h1>🏇🏻 Equitación</h1>
+          </div>
+
+          <div class="equitacion" id="Equitacion">
+            <!-- Este es el deportista 1 de Equitacion -->
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video" src="/videos/salto/Trofeo_Longiness.mp4" poster="/videos/salto/poster/gavino.jpg" alt="Video Francisco Gaviño" controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+                 
+                </p>
+              </div>
+              <div class="titulo_artista"><h2>Equitacion</h2></div>
+              <div class="title"><p>Francisco Gaviño</p></div>
+
+
+            </div>
+            <!-- Este es el deportista 2 de Equitacion -->
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video" src="/videos/salto/Trofeo_Longiness.mp4" poster="/videos/salto/poster/top5.jpg" alt="Video Top 5 saltos" controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+  
+                </p>
+              </div>
+              <div class="titulo_artista"><h2>Equitacion</h2></div>
+              <div class="title"><p>Top 5</p></div>
+
+            </div>
+            <!-- Este es el deportista 3 de Equitacion -->
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video" src="/videos/salto/Trofeo_Longiness.mp4" poster="/videos/salto/poster/caidas.jpg" alt="Video Caidas" controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+                 
+                </p>
+
+              </div>
+              <div class="titulo_artista"><h2>Equitacion</h2></div>
+              <div class="title"><p>Caidas de salto</p></div>
+
+            </div>
+            <!-- Este es el deportista 4 de Equitacion -->
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video" src="/videos/salto/Trofeo_Longiness.mp4" poster="/videos/salto/poster/trofeo.jpg" alt="Video Trofeo Longiness"controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+               
+                </p>
+
+              </div>
+              <div class="titulo_artista"><h2>Equitacion</h2></div>
+              <div class="title"><p>Trofeo Longines</p></div>
+
+            </div>
+            
+          </div>
+
+
+          <!--Titulo para indicar que la tercera categoria es Formula 1-->
+          <div id= "categoria-Formula1" class="categoria">
+            <h1>🏎 Formula 1 </h1>
+          </div>
+
+          <div class="formula1" id="Formula1">
+            <!-- Este es el deportista 1 de formula 1
+             -->
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video" src="/videos/F1/Hamilton vs Alonso - Bahrain GP.mp4" poster="/videos/F1/Poster/FA-Bah.jpg" alt="Adelantamiento FA-HAM Bahrein" controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+             
+                </p>
+
+              </div>
+              <div class="titulo_artista"><h2>F1</h2></div>
+              <div class="title"><p>Bahrain 2023</p></div>
+
+            </div>
+            <!-- Este es el deportista 2 de formula 1
+             -->
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video" src="/videos/F1/Hamilton vs Alonso - Bahrain GP.mp4" poster="/videos/F1/Poster/FA-CAN.png" alt="Adelantamiento FA-HAM Canada" controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+               
+                </p>
+
+              </div>
+              <div class="titulo_artista"><h2>F1</h2></div>
+              <div class="title"><p>Canada 2013</p></div>
+
+            </div>
+            <!-- Este es el deportista 3 de formula 1
+             -->
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video" src="/videos/F1/Hamilton vs Alonso - Bahrain GP.mp4" poster="/videos/F1/Poster/Sai-por.jpg" alt="Salida Carlos Sainz" controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+           
+                </p>
+              </div>
+              <div class="titulo_artista"><h2>F1</h2></div>
+              <div class="title"><p> Portimao 2020</p></div>
+
+            </div>
+            <!-- Este es el deportista 4 de formula 1
+             -->
+            <div class="caratula">
+              <div class="caratula-img-container">
+                <video class="video" src="/videos/F1/Hamilton vs Alonso - Bahrain GP.mp4" poster="/videos/F1/Poster/FA-BRA.jpg" alt="Primera vuelta Brasil 2012" controls></video>
+                <p>
+                  <button class="fav" id="heart" style="display: none;"><img src="/images/fav.png"></button>
+              
+                </p>
+
+
+              </div>
+              <div class="titulo_artista"><h2>F1</h2></div>
+              <div class="title"><p>Brasil 2012 </p></div>
+            </div>
+
+          </div>
+
+        </div>
+</div>
+
+<!-- <script>
+
+
+  const heart = document.querySelector('#heart');
+  socket.on('like', () => {
+    heart.style.color = 'red';
+  });
+</script> -->
+
+<script src="scripts/search.js"></script>
+<script src="scripts/videos.js"></script>
+<script src="scripts/scroll-categorias.js"></script>
+<script src="scripts/movil.js"></script>
+<script src="https://cdn.socket.io/4.4.0/socket.io.min.js"></script>
+<script src="scripts/remote.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Volumen</title>
+    
+
+    <!--enlace con la pagina de estilos correspondiente-->
+
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/funcionalidades.css">
+</head>
+<body>
+
+    <!--Scripts usados en esta html-->
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"></script>
+
+  <!--Con el logo de nuestra app tambien podremos volver a pagina de inicio-->
+    <figure class="logo-box">
+      <!--Aquí situaremos nuestro logo, ocupará un pequeño espacio del div-->
+      <a href="remote-controller.html"> <img src="images/logo.PNG" alt="Home icono" onclick="home()"></a>
+    </figure>
+
+    <button id="full"><img src="/images/full.png" alt="Pantalla completa"></button>
+  
+  <!-- Aquí tendremos todos los botones -->
+  <div class="botones">
+    <button id="volDown" ><img src="/images/down.png" alt="Bajar volumen"></button>
+    <button id="atrasar"><img src="/images/atrasar.png" alt="Atrasar video"></button>
+    <button id="play" ><img src="/images/play_now.png" alt="Play/pause"></button>
+    <!--el boton de play cambiara sgun el estado en el que se encuentre-->
+    <button id="adelantar"><img src="/images/adelantar.png" alt="Adelantar video"></button>
+    <button id="volUp"><img src="/images/up.png" alt="Subir volumen"></button>
+   </div>
+  
+
+  <script src="./scripts/control.js"></script>
+
+</body>
+</html>

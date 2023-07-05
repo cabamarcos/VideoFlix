@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Controller</title>
+      <!--enlace con las paginas de estilos correspondiente-->
+      <link rel="stylesheet" href="style/remote.css">
+      
+</head>
+<body>
+    
+
+  <a id="ayuda" href ="remote-ayuda.html"><image src="./images/help.png"></image></a>
+    <figure class="logo-box">
+      <!--Aquí situaremos nuestro logo, ocupará un pequeño espacio del div-->
+      <img src="images/logo.PNG" alt="logo" onclick="home()">
+    </figure>
+
+    <svg id="nombre" viewbox="15 0 80 20" onclick="home()">
+          <defs>
+            <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="5%" stop-color="#8F0058"/>
+              <stop offset="95%" stop-color="#FAAB00"/>
+            </linearGradient>
+  
+            <linearGradient id="gradient2" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="5%" stop-color="#292567"/>
+              <stop offset="95%" stop-color="#FAAB00"/>
+            </linearGradient>
+  
+            <linearGradient id="gradient3" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="5%" stop-color="#00A8A3"/>
+              <stop offset="95%" stop-color="#FAAB00"/>
+            </linearGradient>
+  
+            <linearGradient id="gradient4" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="5%" stop-color="#FAAB00"/>
+              <stop offset="95%" stop-color="#FAAB00"/>
+            </linearGradient>
+  
+            <linearGradient id="gradient5" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="5%" stop-color="#E05000"/>
+              <stop offset="95%" stop-color="#FAAB00"/>
+            </linearGradient>
+  
+  
+          </defs>
+          <text text-anchor="middle" x="53" y="15" font-size="14">
+          <tspan fill="url(#gradient)"  fill-opacity="0.9">V</tspan>
+          <tspan fill="url(#gradient2)"  fill-opacity="0.9">I</tspan>
+          <tspan fill="url(#gradient3)"  fill-opacity="0.9">V</tspan>
+          <tspan fill="url(#gradient4)"  fill-opacity="0.9">I</tspan>
+          <tspan fill="url(#gradient5)"  fill-opacity="0.9">D</tspan>
+        </text>
+    </svg>
+    
+    
+
+
+    
+
+   
+
+    <!-- input for search -->
+    <input type="text" id="searchInput"  placeholder="Search"><br>
+   
+    <div class="botones">
+      <button id="btnStartStopRecord"><a id="borde"><image src="./images/micro.png"></a></button>
+      <button id='playText'><a id="borde"><image src="./images/reproducir.png"></image></a></button>
+      <button id="like-button"><img src="/images/fav.png"></button>
+      <button id="Volumen"><a id="borde" href="funcionalidades.html"><image src="./images/touch.png"></image></a></button>      
+    </div>
+
+
+
+    <button id="playPause">Play/Pause</button>
+
+    <div id="joyDiv"></div>
+  
+ 
+    <script src="/scripts/remoteSpeech.js"></script>
+   
+
+    
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"></script>
+    <script src="https://bobboteck.github.io/joy/joy.js"></script>
+    
+    <script>
+        const IP_ADDRESS = `http://${location.host}`
+        const socket = io(IP_ADDRESS);
+        
+        // Escuchamos el evento "input" del input de búsqueda para filtrar los videos en tiempo real
+        
+        searchInput.addEventListener('input', function() {
+            let video = searchInput.value;
+            console.log(video);
+            socket.emit('searchInput', video);
+        });
+        
+
+      
+      
+                
+        socket.on('connect', () => {
+            socket.emit('clientType', 'remote controller');
+        });
+
+
+
+        const dirTranslation = {
+            "N": "ArrowUp",
+            "S": "ArrowDown",
+            "E": "ArrowRight",
+            "W": "ArrowLeft"
+        }
+
+        const dirTranslationKeys = Object.keys(dirTranslation);
+
+        const joy = new JoyStick(
+            // name of the div element
+            'joyDiv',
+            {
+                internalFillColor: 'orange',
+                internalStrokeColor: 'orange',
+                externalStrokeColor: 'orange',
+            });
+
+        setInterval(() => {
+            const direction = joy.GetDir();
+            if (dirTranslationKeys.includes(direction)) {
+                const action = dirTranslation[direction];
+                socket.emit('joystickAction', action);
+            }
+        }, 400);
+
+        const sendAction = (action) => {
+            socket.emit('joystickAction', action);
+        }
+
+        const playPause = document.getElementById('playPause');
+        playPause.addEventListener('click', () => sendAction('PlayPause'));
+        
+  //       const likeButton = document.querySelector('#like-button');
+  // likeButton.addEventListener('click', () => {
+  //   socket.emit('like');
+  // });
+
+    </script>
+    <script src="scripts/me_gusta.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+#enlaces-movil {
+    display: none;
+}
+#movil_user {
+    display: none;
+}
+
+#movil {
+    display: none;
+}
+/* Media query para ordenador normal según la plantilla del ejercicio*/
+
+@media(max-width:10000px){
+    .barra-sign-in-container{
+        background-color: rgb(43, 42, 42);
+        width: 100%;
+        height: 100px;
+        position: relative;
+    }
+    .barra-sign-in a{
+        transition: background-color 0.5s;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color:white;
+    }
+}
+
+.categorias {
+    height: 76.25vh;
+    width: 85vw;
+    overflow-y: scroll;
+    padding-left: 40px;
+    /*padding-bottom: 10%;*/
+    position: absolute;
+    visibility: hidden;
+    background-color: black;
+    z-index: 2;
+    font-size: small;
+}
+
+
+/* Media query para ipad */
+@media (max-width:750px){
+    .logo-nombre{
+
+        background-color:rgb(43, 42, 42);
+        align-items:center;
+        display:inline-block;
+        /*preguntar forma de ordenarlos para no tener que dar aquí un padding*/
+        /* padding-top: 10px; */
+    }
+    
+    .logo-nombre svg{
+        margin-top: 10%;
+        margin-left: 5%;
+        width: 60%;
+    }
+
+    .menu-opciones img{
+        width: 15%;
+        min-width: 30px;
+
+    }
+    .nav-vertical{
+        width: 20%;
+    }
+
+    .car-img-container{
+        display: block;
+        width: 10%;
+        height: auto;
+    }
+    .car-img-container img{
+        display: none;
+    }
+}
+
+
+/* Media query cuando estamos en formato movil */
+@media (max-width: 600px) {
+    .logo-nombre{
+        height: 104px;
+        background-color:rgb(43, 42, 42);
+        display: block;
+
+        /* Esto quiere decir que dentro de su caja común donde quieres alinear
+        los elementos. En este caso queremos que se queden a la altura del centro
+        de la caja del menú*/
+        align-items:center;
+    }
+
+    /* Estilo de la animación del nombre */
+    .logo-nombre svg{
+        font-weight:bold;
+        width: 100px;
+        display: block;
+    }
+
+    .logo-nombre figure{
+        display: block;
+    }
+
+    .barra-sign-in-container{
+        background-color: rgb(43, 42, 42);
+        display: inline-block;
+    }
+    .barra-sign-in img{
+        width: 20%;
+        opacity: 1;
+        margin-left: 10%;
+    }
+    .barra-sign-in-container button{
+        padding: 10px 20px;
+        border-radius: 5px;
+        color:white;
+    }
+
+    .dcha {
+        width: 113%;
+    }
+    #contenido, .resultados, #cuenta_pag, #crear, #perfil_pag, .mis_listas, .artistas_pagina, .lista_reproducción, .albumes, .categorias {
+        width: 100%;
+        margin-left: 0;
+        height: 85vh;
+        left: 0;
+    }
+    .nav-vertical{
+        background-color: transparent;
+        height: 0;
+    }
+
+    .enlaces{
+        background-color:black;
+        display: none;
+    }
+
+    #movil {
+        display: block;
+        cursor: pointer;
+        transition: background-color 0.5s;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color:  #f9cea4;
+        font-weight: bold;
+    }
+    #movil:hover {
+        background-color: rgb(76, 75, 75);
+        color: white;
+    }
+    #movil_user{
+        display: block;
+        cursor: pointer;
+        transition: background-color 0.5s;
+        padding: 1.5em 1em;
+        border-radius: 5px;
+        color: #f9cea4;
+        font-weight: bold;
+    }
+    #enlaces-movil{
+        /* display:block; */
+        display: none;
+        background-color: #444444;
+        position: absolute;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+    }
+    .menu-opciones{
+        height:30vh;
+        padding-bottom: 2%;
+    }
+
+    .politicas{
+        margin-bottom: 500px;
+    }
+
+    /* Organizar los hipervínculos como bloques con tamaño predefinido (mediante márgenes), uno debajo del otro */
+    .politicas a{
+        display: block;
+        margin-bottom: 5%;
+        margin-left: 5%;
+    }
+
+
+    .logo-box img{
+        width: 85%;
+    }
+    .logo-nombre svg{
+        width: 0;
+    }
+
+    .enlaces a{
+        font-size: x-small;
+        color: rgb(247, 194, 104);
+    }
+
+    .frase-explicativa, .categoria{
+        font-size: small;
+    }
+
+    .menu-opciones img {
+        height: 30px;
+        width: 10px;
+    }
+    .menu-opciones-box {
+        border-radius: 1px;
+        border-color:  #f9cea4;
+        height: 20%;
+        border-style: solid;
+        border-width: 1px;
+        width: 85%;
+        margin: 2% 7%;
+
+    }
+
+
+    #footer{
+        height: 10vh;
+    }
+
+    .car-img-container{
+        display: block;
+        width: 10%;
+        height: auto;
+    }
+    .car-img-container img{
+        width: 50px;
+        height: auto;
+    }
+
+    .caratula {
+        min-width: 100px;
+    }
+    .overlay{
+        font-size: 45%;
+    }
+    .formulario{
+        width: 100%;
+    }
+}
+
+/*media query para movil más pequeño*/
+@media (max-width: 500px) {
+
+    .contenido{
+        margin-left: 0;
+    }
+
+
+}

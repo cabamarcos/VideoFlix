@@ -1,0 +1,436 @@
+/* ====================================================================
+PARA TODO EL BODY O HTML
+===================================================================== */
+/* Margen, color de fondo y fuente de la letra para todo el cuerpo */
+body{
+    font-family:-apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+    margin: 0;
+    background-color: black;
+}
+/* Estilo para los hipervínculos */
+a {
+    text-decoration: none;
+    color: #000;
+}
+/* Margen para los párrafos */
+p {
+    margin: 0;
+}
+/* Adaptamos el ancho de las cajas al padding y a los márgenes */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    user-select: none;
+    box-sizing: border-box;}
+/* Color del texto */
+
+h1, h2, h3, p, label {
+    color:rgb(43, 42, 42);
+}
+
+/* Margen para todas las figuras del HTML (en nuestro caso, las imágenes) */
+figure {
+    margin: 0;
+}
+
+figure img{
+    cursor: pointer;
+}
+
+svg{
+    cursor: pointer;
+}
+
+/* ====================================================================
+TODO LO RELACIONADO CON EL NAV
+===================================================================== */
+/* Los elementos de la columna de la derecha se colocarán uno debajo de otro */
+.container {
+    display: flex;
+    /*margin: 0;*/
+}
+/* Tamaño y color de la columna de la izquierda*/
+.nav-vertical{
+    background-color:#676767;
+    width: 15vw;
+    height: 100vh; /* vh es viewport height -> 100% pantalla*/
+}
+.nav-vertical {
+    background-color: #676767; /* Color de fondo con transparencia */
+    width: 15vw; /* Ancho */
+    height: 100vh; /* Altura (100% del alto de la ventana del navegador) */
+    backdrop-filter: blur(10px); /* Desenfoque de 10px */
+    opacity: 0.9; /* Opacidad del 90% */
+}
+
+/* Container con el logo y el nombre */
+.logo-nombre{
+    height: 100px;
+    background-color: rgb(48, 47, 47);
+    display: flex;
+    /* Esto quiere decir que dentro de su caja común donde quieres alinear
+    los elementos. En este caso queremos que se queden a la altura del centro
+    de la caja del menú*/
+    align-items:center;
+}
+
+/* Contenedor del logo */
+.logo-box{
+    margin: 0 2%;
+    height: 50px;
+    justify-content: center;
+}
+
+
+/* Estilo de la imagen del contenedor del logo */
+.logo-box img{
+    max-width: 50px;
+}
+
+/* Estilo de la animación del nombre */
+.logo-nombre svg{
+    font-weight:bold;
+    width: 100%;
+}
+
+/* Estilo del contenedor de los enlaces de la izquierda */
+.enlaces{
+    /* 10vh: footer, 100px: header */
+    height: calc(100% - 2vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #676767;
+}
+
+
+/* Contenedor de los enlaces a las Políticas */
+.politicas p {
+    margin-bottom: 5px;
+    margin-left: 5%;
+    color: rgb(255, 255, 255);
+}
+.politicas a, .politicas i{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* Hipervínculos a las categorías*/
+.menu-opciones-box{
+    display: flex;
+    align-items: center;
+    margin: 10% 5%;
+    background-color: #676767;
+}
+
+.menu-opciones {
+    overflow-y: auto;
+    height: 95vh;
+    background-color: #676767;
+}
+/* Iconos de los hipervínculos */
+.menu-opciones-box{
+    cursor: pointer;
+}
+
+.menu-opciones img{
+    width: 15%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    min-width: 40px;
+    border-radius: 25px;
+}
+
+.menu-opciones-box p{
+    margin-left: 5%;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+}
+
+.menu-opciones-box:hover{
+    background-color: #6d6d6d;
+}
+
+
+#categoria-Equitacion, #categoria-Formula1{
+    margin-top: 5%;
+}
+
+
+
+/* ====================================================================
+TODO LO RELACIONADO CON EL CONTENIDO DE LA DERECHA
+===================================================================== */
+.dcha {
+    width: 85vw;
+    /*height: 75vh;*/
+    background-color: rgb(43, 42, 42);
+    margin: 0;
+}
+
+.path{
+    margin-top: 2%;
+}
+
+.path h2{
+    display: inline;
+}
+/* Márgenes, tamaño y dirección en la que se organizan las categorías*/
+#contenido {
+    height: 86.25vh;
+    width: 85vw;
+    overflow-y: scroll;
+    background: linear-gradient(to bottom right, #ffeed4, #e2daff, #bce4e6, #efe0cf, #f5cfc6);
+    padding-left: 40px;
+    padding-bottom: 10%;
+    position: absolute;
+}
+
+button {
+    background-color: rgb(43, 42, 42);
+    color: white;
+    /*height: 5%;*/
+    border-radius: 10px;
+    /*font-weight: 600;*/
+    border: none;
+    cursor: pointer;
+    /*width: 10%;*/
+}
+
+/* Posición fija de la barra del sign-in, y sus elementos se colocarán uno al lado del otro */
+.barra-sign-in-container{
+    margin: 0;
+    padding: 0.25em;
+}
+
+.barra-sign-in-container ul{
+    height: 100%;
+    width: 100%;
+}
+
+/* The subnavigation menu */
+.subnav {
+    float: right;
+    overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+.subnavbtn input{
+    background-color: black;
+    color: white;
+}
+
+.subnav:hover .subnavbtn {
+    border-radius: 15px;
+
+}
+
+.subnavbtn:hover i{
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background-color:rgb(43, 42, 42);
+    height: 12vh;
+}
+
+
+
+
+.subnav button:hover{
+    background-color: #6d6d6d;
+    color: #ffffff;
+
+}
+
+.subnavbtn i {
+    float: left;
+    text-decoration: none;
+    margin-right: 0.5em;
+    font-size: 2em;
+    border: none;
+    margin-top: -0.5em;
+}
+
+.subnavbtn label{
+    float: right;
+    margin-top: -0.5em;
+}
+
+
+
+.subnavbtn button:hover{
+    color: #ffffff;
+    background-color: transparent;
+}
+
+/* Style the subnav links */
+.subnav-content button {
+    float: left;
+    color: #ffffff;
+    text-decoration: none;
+    height: 12.25vh;
+    width: auto;
+    padding: 0 1em;
+    font-size: 1em;
+    border: none;
+    font-family: "Copperplate", fantasy;
+    vertical-align: middle;
+}
+
+.subnav-content a {
+    float: left;
+    color: #ffffff;
+    text-decoration: none;
+    height: 12.25vh;
+    width: auto;
+    padding: 2.25em 1em;
+    font-size: 1em;
+    border: none;
+    vertical-align: middle;
+    border-radius: 15px;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+    background-color: #6d6d6d;
+}
+
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+    display: contents;
+}
+
+
+
+/* Las categorías y sus contenidos se colocarán en la misma línea,
+y si no hay espacio se pondrán en la siguiente */
+.categoria{
+    margin-bottom: 2%;
+}
+
+.boulder, .equitacion, .formula1, .frase-explicativa, #busq-box {
+    display:flex;
+    flex-wrap:wrap;
+    gap: 20px;
+}
+
+.frase-explicativa h1{
+    margin: 1em 0;
+}
+
+/* Las carátulas se adaptarán a las dimensiones del HTML */
+.caratula-img-container , .album-img-container {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Estilo del contenedor gris oscuro de cada canción
+Pondremos márgenes y paddings para que su contenido
+El tamaño del contenedor está establecido al 15% para
+que todos los contenedores sean iguales */
+.caratula {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    color: #706f6f;
+    padding: 20px;
+    width: 20%;
+    margin-right: 2%;
+    margin-bottom: 5%;
+    min-width: 200px;
+  }
+/* Estilo de los títulos y nombres de artistas */
+.caratula h2{
+    font-size: small;
+}
+
+.caratula p{
+    font-size: 11px;
+}
+
+/* Imágenes adaptadas al contenedor y sus márgenes*/
+.caratula img {
+    width: 100%;
+}
+
+.caratula video{
+    width: 100%;    
+}
+
+/* Animación contenedor negro con sombra de las carátulas */
+.caratula:hover{
+    background-color: rgb(247, 209, 168);
+    box-shadow: 1px 12px 16px 1px rgba(109, 107, 107, 0.24), 0 2px 50px 0 rgba(82, 81, 81, 0.19);
+    color: rgba(0, 0, 0, 0);
+    opacity: 0.9;
+}
+
+
+/*Cuanto queremos que se oscurezca la imagen*/
+.caratula-img-container:hover .overlay {opacity: 0.8;}
+
+
+.cancion-artista h2 {
+    color: rgb(43, 42, 42);
+    text-overflow: ellipsis;
+    /*width: 100%;*/
+    font-size:1.15em;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.selected {
+    background-color: rgb(247, 209, 168);
+    box-shadow: 1px 12px 16px 1px rgba(109, 107, 107, 0.24), 0 2px 50px 0 rgba(82, 81, 81, 0.19);
+    color: rgba(0, 0, 0, 0);
+    opacity: 0.9;
+  }
+
+.fav{
+    background-color: #f6ddcc00;
+    color: white;
+    position: absolute;
+    right: 0;
+    width: 20x;
+    opacity: 0.6;
+    /* display:none; */
+
+}
+
+.num{
+    background-color: #f6ddcc00;
+    color:black;
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+}
+

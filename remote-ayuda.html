@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote-Tutorial</title>
+    <link rel="stylesheet" href="style/remote-ayuda.css">
+</head>
+<body>
+  <!--Con el logo de nuestra app podras volver a la pahina de inicio-->
+    <figure class="logo-box">
+      <!--Aquí situaremos nuestro logo, ocupará un pequeño espacio del div-->
+      <a href="remote-controller.html"> <img src="images/logo.PNG" alt="Home icono" onclick="home()"></a>
+    </figure>
+   
+    <svg id="nombre" viewbox="15 0 80 20" onclick="home()">
+          <defs>
+            <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="5%" stop-color="#8F0058"/>
+              <stop offset="95%" stop-color="#FAAB00"/>
+            </linearGradient>
+  
+            <linearGradient id="gradient2" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="5%" stop-color="#292567"/>
+              <stop offset="95%" stop-color="#FAAB00"/>
+            </linearGradient>
+  
+            <linearGradient id="gradient3" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="5%" stop-color="#00A8A3"/>
+              <stop offset="95%" stop-color="#FAAB00"/>
+            </linearGradient>
+  
+            <linearGradient id="gradient4" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="5%" stop-color="#FAAB00"/>
+              <stop offset="95%" stop-color="#FAAB00"/>
+            </linearGradient>
+  
+            <linearGradient id="gradient5" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="5%" stop-color="#E05000"/>
+              <stop offset="95%" stop-color="#FAAB00"/>
+            </linearGradient>
+  
+  
+          </defs>
+          <text text-anchor="middle" x="50" y="15" font-size="17">
+          <tspan fill="url(#gradient)"  fill-opacity="0.9">V</tspan>
+          <tspan fill="url(#gradient2)"  fill-opacity="0.9">I</tspan>
+          <tspan fill="url(#gradient3)"  fill-opacity="0.9">V</tspan>
+          <tspan fill="url(#gradient4)"  fill-opacity="0.9">I</tspan>
+          <tspan fill="url(#gradient5)"  fill-opacity="0.9">D</tspan>
+        </text>
+    </svg>
+    
+    <div id="texto">
+      <p>Esta página te <b>ayuda</b> <br> a saber los diferentes <br> <b>movimientos</b> que puedes hacer.<span class="ayuda"><img src="/images/turotial.png" alt="tutorial"></span></p>
+      <p>En la página principal <b>desplázate</b><br> con el joystick (arriba, abajo, izquierda, derecha)<br> por los vídeos<span class="ayuda"><img src="/images/joystick.png" alt="Volumen"></span></p>
+      <p>Pulsa el símbolo de <b>tocar</b>,<br> y accederás <br> a los controles de video<span class="ayuda"><img src="/images/touch.png" alt="Volumen"></span></p>
+      <p>Toca dos veces <br> en la <b>derecha</b> de la pantalla,<br> y adelantas el video <span class="ayuda"><img src="/images/adelantar.png" alt="Adelantar"></span></p>
+      <p>Toca dos veces <br> en la <b>izquierda</b>  de la pantalla , <br> y atrasas el video <span class="ayuda"><img src="/images/atrasar.png" alt="Atrasar"></span></p>
+      <p> Toca dos veces en el <b> centro, </b><br> y ampliarás el video<span class="ayuda"><img src="/images/full.png" alt="Ampliar"></span></p>
+      <p>Podrás controlarlo con <b>botones</b><br> si lo prefieres<span class="ayuda"><img src="/images/botones.png" alt="Botones"></span></p>
+
+    </div>
+    
+    
+
+  
+    
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js"></script>
+    </body>
+    </html>

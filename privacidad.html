@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- Lengua en el que está escrita la página -->
+<html lang="en">
+<head>
+    <!-- Codificación de los caracteres de Unicode -->
+    <meta charset="UTF-8">
+    <!-- Breve descripción de la empresa -->
+    <meta name="description" content="Beem, music player for everyone">
+
+    <!-- Para que la página sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- título de la página, esto sirve para identificación del archivo -->
+    <title>Politica de Privacidad</title>
+
+    <!-- Favicon, para que al lado del nombre del archivo salga nuestro logo-->
+    <link rel="apple-touch-icon" sizes="32x32" href="images/favicons/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://kit.fontawesome.com/cb1b141342.js" crossorigin="anonymous"></script>
+
+    <!--Enlazamos esta pagina con su correspondiente hoja de estilos-->
+    <link rel="stylesheet" href="style/privacidad.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <!--También incluimos la librería de los iconos de redes sociales-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+    <!-- Este es el container principal en donde pondremos márgenes de ser necesario-->
+    <div class="container">
+      <!--Esta es la caja para nuestro nav bar vertical que ocupará un 25%-->
+      <nav class="nav-vertical">
+        <div class="logo-nombre">
+          <figure class="logo-box">
+            <!--Aquí situaremos nuestro logo, ocupará un pequeño espacio del div-->
+            <img src="images/logo.PNG" alt="logo_VIVID" onclick="home()">
+          </figure>
+
+
+      <!-- Efecto obtenido de: https://codepen.io/web-tiki/pen/YNKMpB
+      modificaciones de color y tipo de letra -->
+      <svg id="nombre" viewbox="15 0 80 20" onclick="home()">
+        <defs>
+          <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="#8F0058"/>
+            <stop offset="95%" stop-color="#FAAB00"/>
+          </linearGradient>
+
+          <linearGradient id="gradient2" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="#292567"/>
+            <stop offset="95%" stop-color="#FAAB00"/>
+          </linearGradient>
+
+          <linearGradient id="gradient3" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="#00A8A3"/>
+            <stop offset="95%" stop-color="#FAAB00"/>
+          </linearGradient>
+
+          <linearGradient id="gradient4" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="#FAAB00"/>
+            <stop offset="95%" stop-color="#FAAB00"/>
+          </linearGradient>
+
+          <linearGradient id="gradient5" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="#E05000"/>
+            <stop offset="95%" stop-color="#FAAB00"/>
+          </linearGradient>
+
+
+        </defs>
+        <text text-anchor="middle" x="50" y="15" font-size="17">
+          <tspan fill="url(#gradient)"  fill-opacity="0.9">V</tspan>
+          <tspan fill="url(#gradient2)"  fill-opacity="0.9">I</tspan>
+          <tspan fill="url(#gradient3)"  fill-opacity="0.9">V</tspan>
+          <tspan fill="url(#gradient4)"  fill-opacity="0.9">I</tspan>
+          <tspan fill="url(#gradient5)"  fill-opacity="0.9">D</tspan>
+        </text>
+      </svg>
+
+
+    </div>
+
+    <div class="enlaces">
+
+
+
+        <div class="menu-opciones">
+          <div class="menu-opciones-box">
+            <img src="images/home.png" alt="Home icono">
+            <!--Este enlace te lleva a Home-->
+            <a id="formula" href="home_usuario.html">Home</a>
+          </div>
+          <div class="menu-opciones-box">
+            <img src="images/boulder.png" alt="Boulder icono">
+            <!--Este enlace te lleva a la altura de Boulder en la pagina -->
+            <a id="formula" href="home_usuario.html">Boulder</a>
+          </div>
+          <div class="menu-opciones-box">
+            <img src="images/equitacion.png" alt="Equitacion icono">
+            <!--Este enlace te lleva a la altura de Equitación en la pagina -->
+            <a id="formula" href="home_usuario.html">Equitacion</a>
+          </div>
+          <div class="menu-opciones-box">
+            <img src="images/formula.png" alt="Formula 1 icono">
+            <!--Este enlace te lleva a Formula 1-->
+            <a id="formula" href="home_usuario.html">Formula&nbsp;1</a>
+          </div>
+  
+  
+        </div>
+  
+        <div class="politicas">
+  
+          <p> © Vivid 2023 - <br> </p>
+          <p> All Rights Reserved <br></p>
+          <p><i class="fa-solid fa-phone"></i><a href="contacto.html"> Contacto <br></a></p>
+          <p><a href="privacidad.html"> Política de Privacidad <br></a></p>
+  
+        </div>
+      </div>
+  
+    </nav>
+
+    <div class="dcha">
+        <div class="barra-sign-in-container">
+            <div class="barra-sign-in">
+                <!-- menú desplegable -->
+                <i id="movil" class="material-icons">menu</i>
+            </div>
+        </div>
+        <div id="enlaces-movil">
+            <div class="menu-opciones">
+              <div class="menu-opciones-box">
+                <img src="images/home.png" alt="Home icono">
+                <!--Este enlace te lleva a Home-->
+                <p onclick="home()"> Home<br></p>
+              </div>
+              <div class="menu-opciones-box">
+                <img src="images/boulder.png" alt="Boulder icono">
+                <!--Este enlace te lleva a Boulder-->
+                <p onclick="categoria(0)"> Boulder<br></p>
+              </div>
+              <div class="menu-opciones-box">
+                <img src="images/equitacion.png" alt="Equitacion icono">
+                <!--Este enlace te lleva a Equitacion-->
+                <p onclick="categoria(1)"> Equitacion<br></p>
+              </div> 
+              <div class="menu-opciones-box">
+                <img src="images/formula.png" alt="Formula 1 icono">
+                <!--Este enlace te lleva a Formula1-->
+                <p onclick="categoria(2)"> Formula 1<br></p>
+              </div>
+            </div>
+          </div>
+
+        <div id="contenido">
+            <div id="path">
+                <h3> <a href="home_usuario.html">Home</a> > Politica de Privacidad </h3>
+            </div>
+
+            <div class="formulario">
+                <div class="form-container">
+                    <img class="centered" src="images/logo_bw.png" alt="logo_VIVID" onclick="home()">
+                <h1 class="mensaje">Politica de Privacidad</h1>
+                <div id="texto">
+                    <p><b>Data Controller</b></p>
+                    <p><br>VIVID S.A.<br> Dirección Campus de Leganés.<br>Avda. Universidad, 30. 28911 Leganés, Madrid.<br></p>
+                    <p> <br> </p>
+                    <p><b>Purpose of the processing</b> 
+                    <p><br>-  To attend the requests of information, <br> as well as any other request or consultation.</p>
+                    <p><br>-  Manage personnel selection processes.<br></p>
+                    <p> <br> </p>
+                    <p><b>Legal Basis</b> 
+                    <p><br>In order to process your data,<br>
+                    we rely on the contract between the parties,<br>
+                    or in a legal obligation to do so,<br>
+                    or on your consent for certain processing.<br></p> 
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--js vinculado-->
+<script src="scripts/movil.js"></script>
+</body>
+</html>
