@@ -4,6 +4,7 @@
 
     npm install
 
+
     npm run dev
 
 Una vez se ejecutan dichos comando aparecerán los enlaces en la terminal con los cuales pueden acceder a la web y el mando.
