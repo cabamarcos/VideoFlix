@@ -77,7 +77,11 @@
     <button id="playPause">Play/Pause</button>
 
     <div id="joyDiv"></div>
-  
+    
+    <div class="botones">
+      <button id="scrollUp"><a id="borde"><image src="./images/arrow_upward.png"></image></a></button>
+      <button id="scrollDown"><a id="borde"><image src="./images/arrow_downward.png"></image></a></button>
+    </div>
  
     <script src="/scripts/remoteSpeech.js"></script>
    
@@ -135,12 +139,21 @@
         }, 400);
 
         const sendAction = (action) => {
-            socket.emit('joystickAction', action);
+          console.log(action);
+          socket.emit('joystickAction', action);
         }
 
         const playPause = document.getElementById('playPause');
         playPause.addEventListener('click', () => sendAction('PlayPause'));
         
+        const scrollUp = document.getElementById('scrollUp');
+        //cuando se de al boton scroll up se enviara la accion de scroll up por el socket
+        scrollUp.addEventListener('click', () => sendAction('ScrollUp'));
+
+        const scrollDown = document.getElementById('scrollDown');
+        //cuando se de al boton scroll down se enviara la accion de scroll down por el socket
+        scrollDown.addEventListener('click', () => sendAction('ScrollDown'));
+
   //       const likeButton = document.querySelector('#like-button');
   // likeButton.addEventListener('click', () => {
   //   socket.emit('like');

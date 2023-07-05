@@ -78,6 +78,48 @@
     selectedIndex = index;
     containers[selectedIndex].parentElement.classList.add('selected');
   }
+  
+  // Hacer scroll suave hacia abajo
+  function scrollToBottomSmooth() {
+    const scrollTo = document.body.scrollHeight;
+    smoothScrollTo(scrollTo);
+  }
+
+  // Hacer scroll suave hacia arriba
+  function scrollToTopSmooth() {
+    smoothScrollTo(0);
+  }
+
+  function smoothScrollTo(to) {
+    const duration = 1000; // Duración en milisegundos
+    const element = document.scrollingElement || document.documentElement;
+    const start = element.scrollTop;
+    const change = to - start;
+    const startDate = +new Date();
+
+    // Animación de scroll
+    const easeInOutQuad = (t, b, c, d) => {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+
+    const animateScroll = () => {
+      const currentDate = +new Date();
+      const currentTime = currentDate - startDate;
+      element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+      if (currentTime < duration) {
+        requestAnimationFrame(animateScroll);
+      } else {
+        element.scrollTop = to;
+      }
+    };
+
+    animateScroll();
+  }
+
+
 
 //Funcion para el boton de me gusta
   function likeButton(){
@@ -123,6 +165,12 @@
         break;
       case 'PlayPause':
         playPauseVideo();
+        break;
+      case 'scrollUp':
+        scrollToTopSmooth();
+        break;
+      case 'scrollDown':
+        scrollToBottomSmooth();
         break;
     }
   });
