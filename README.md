@@ -1,9 +1,10 @@
 # Videoflix
 
-**Para acceder a las dos interfaces ejecutad los siguientes comandos en una terminal dentro de la carpeta:**
+**Para poder acceder a la aplicación, primero tendrá que instalar node.js poniendo este código en la terminal dentro de la carpeta del proyecto:**
 
     npm install
 
+**Después, ejecuta este para obtener los enlaces**
 
     npm run dev
 
