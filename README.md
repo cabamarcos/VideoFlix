@@ -1,4 +1,4 @@
-# P2 sistemas interactivos y ubicuos 
+# Videoflix
 
 # 
 **Para acceder a las dos interfaces ejecutad los siguientes comandos en una terminal dentro de la carpeta:**
