@@ -1,10 +1,12 @@
-# P2 sistemas interactivos y ubicuos 
+# Videoflix
 
-# 
-**Para acceder a las dos interfaces ejecutad los siguientes comandos en una terminal dentro de la carpeta:**
+**Para poder acceder a la aplicación, primero tendrá que instalar node.js poniendo este código en la terminal dentro de la carpeta del proyecto:**
 
-npm install
-npm run dev
+    npm install
+
+**Después, ejecuta este para obtener los enlaces**
+
+    npm run dev
 
 Una vez se ejecutan dichos comando aparecerán los enlaces en la terminal con los cuales pueden acceder a la web y el mando.
 
@@ -45,31 +47,31 @@ El segundo botón sirve para leer lo escrito dentro de la barra de búsqueda. Un
 
 El tercer botón sirve para poder acceder a otra de las pantallas del mando en la cual controlamos todas las funcionalidades del video y volumen, se puede realizar de forma tactil(explicado en el icono de pregunta de la pagina principal del mando) o a traves de los botones que estan en la misma página.
 
-    Acciones de volumen (delimitas en el 80% de la pantalla dejando un margen del 10% arriba y 10% abajo para que no interfiera con los botones)
+Acciones de volumen (delimitas en el 80% de la pantalla dejando un margen del 10% arriba y 10% abajo para que no interfiera con los botones)
 
-    - Para subir el volumen se requiere arrastrar el dedo de manera vertical de abajo a arriba (la acción se ejecuta en un rango del 0% al 100% de unidad en unidad)
-    - Para bajar el volumen se requiere arrastrar el dedo de manera vertical de arriba a abajo (la acción se ejecuta en un rango del 0% al 100% de unidad en unidad)
+- Para subir el volumen se requiere arrastrar el dedo de manera vertical de abajo a arriba (la acción se ejecuta en un rango del 0% al 100% de unidad en unidad)
+- Para bajar el volumen se requiere arrastrar el dedo de manera vertical de arriba a abajo (la acción se ejecuta en un rango del 0% al 100% de unidad en unidad)
 
-    - También hemos implementado unos botones que realizan la misma acción (subir el volumen  en un rango del 0% al 100% en unidades de 10)
+- También hemos implementado unos botones que realizan la misma acción (subir el volumen  en un rango del 0% al 100% en unidades de 10)
 
-    Acciones de play pause
+Acciones de play pause
 
-    - Si pulsas en cualquier parte de la pantalla una vez se para (si está en marcha el video) o se pone en marcha (si está parado)
+- Si pulsas en cualquier parte de la pantalla una vez se para (si está en marcha el video) o se pone en marcha (si está parado)
     
-    - Existe un botón implementado con su respectivo icono que realiza la misma acción
+- Existe un botón implementado con su respectivo icono que realiza la misma acción
 
 
-    Acciones de adelantar/atrasar el vídeo 
+Acciones de adelantar/atrasar el vídeo 
 
-    - Si pulsas dos veces a la derecha adelantas el vídeo 10 segundos
-    - Si pulsas dos veces a la izquierda atrasas el vídeo 10 segundos
+- Si pulsas dos veces a la derecha adelantas el vídeo 10 segundos
+- Si pulsas dos veces a la izquierda atrasas el vídeo 10 segundos
 
-    - Existe dos botones implementados con su respectivo icono que realizan la misma acción
+- Existe dos botones implementados con su respectivo icono que realizan la misma acción
 
-    Acciones de full screen/exit full screen 
+Acciones de full screen/exit full screen 
 
-    - Si pulsas dos veces en el centro haces full screen o exit full screen
-    - Existe un botón implementado con su respectivo icono que realiza la misma acción en la esquina superior derecha
+- Si pulsas dos veces en el centro haces full screen o exit full screen
+- Existe un botón implementado con su respectivo icono que realiza la misma acción en la esquina superior derecha
 
 
 En la página de ayuda o tutorial se ofrece una explicación detallada de cómo se usa la interfaz móvil. 
