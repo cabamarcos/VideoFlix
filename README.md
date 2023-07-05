@@ -1,6 +1,5 @@
 # Videoflix
 
-# 
 **Para acceder a las dos interfaces ejecutad los siguientes comandos en una terminal dentro de la carpeta:**
 
 npm install
