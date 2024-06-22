@@ -93,6 +93,6 @@ http.listen(3000, () => {
     // Show where is the remote controller and the web interface
     console.log("\nel control remoto y la interfaz web deben estar conectadas por medio del mismo wifi \n")
 
-    console.log(`Web interface: \t   http://${ip.address()}:3000/web\n`);
+    console.log(`Web interface: \t   http://${ip.address()}:3000/index.html\n`);
     console.log(`Remote controller: http://localhost:3000/remote-controller\n`);
 });
