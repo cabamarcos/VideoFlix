@@ -7,7 +7,22 @@ const io = require('socket.io')(http, {
     methods: ['GET', 'POST']
   }
 });
-const ip = require('ip');
+const os = require('os');
+
+// Function to get local IP address safely
+function getLocalIP() {
+    const interfaces = os.networkInterfaces();
+    for (const interfaceName in interfaces) {
+        const interfaceData = interfaces[interfaceName];
+        for (const addressInfo of interfaceData) {
+            // Skip internal (loopback) and non-IPv4 addresses
+            if (addressInfo.family === 'IPv4' && !addressInfo.internal) {
+                return addressInfo.address;
+            }
+        }
+    }
+    return 'localhost'; // fallback
+}
 
 app.use(express.static(__dirname));
 
@@ -93,6 +108,6 @@ http.listen(3000, () => {
     // Show where is the remote controller and the web interface
     console.log("\nel control remoto y la interfaz web deben estar conectadas por medio del mismo wifi \n")
 
-    console.log(`Web interface: \t   http://${ip.address()}:3000/index.html\n`);
+    console.log(`Web interface: \t   http://${getLocalIP()}:3000/index.html\n`);
     console.log(`Remote controller: http://localhost:3000/remote-controller\n`);
 });

@@ -79,23 +79,64 @@
     containers[selectedIndex].parentElement.classList.add('selected');
   }
   
-  // Hacer scroll suave hacia abajo
+  // Hacer scroll suave hacia abajo (página completa)
   function scrollToBottomSmooth() {
     const scrollTo = document.body.scrollHeight;
     smoothScrollTo(scrollTo);
   }
 
-  // Hacer scroll suave hacia arriba
+  // Hacer scroll suave hacia arriba (página completa)
   function scrollToTopSmooth() {
     smoothScrollTo(0);
   }
 
+  // Hacer scroll incremental hacia abajo
+  function scrollDownIncremental() {
+    const contenido = document.getElementById('contenido');
+    if (!contenido) {
+      return;
+    }
+    
+    const scrollAmount = contenido.clientHeight * 0.3;
+    const currentPosition = contenido.scrollTop;
+    const maxScroll = contenido.scrollHeight - contenido.clientHeight;
+    const newPosition = Math.min(maxScroll, currentPosition + scrollAmount);
+    
+    contenido.scrollTo({
+      top: newPosition,
+      behavior: 'smooth'
+    });
+  }
+
+  // Hacer scroll incremental hacia arriba
+  function scrollUpIncremental() {
+    const contenido = document.getElementById('contenido');
+    if (!contenido) {
+      return;
+    }
+    
+    const scrollAmount = contenido.clientHeight * 0.3;
+    const currentPosition = contenido.scrollTop;
+    const newPosition = Math.max(0, currentPosition - scrollAmount);
+    
+    contenido.scrollTo({
+      top: newPosition,
+      behavior: 'smooth'
+    });
+  }
+
   function smoothScrollTo(to) {
+    console.log(`smoothScrollTo llamado con destino: ${to}`);
     const duration = 1000; // Duración en milisegundos
     const element = document.scrollingElement || document.documentElement;
     const start = element.scrollTop;
     const change = to - start;
     const startDate = +new Date();
+    
+    console.log(`Inicio: ${start}, Cambio: ${change}, Destino: ${to}`);
+    console.log(`Elemento para scroll:`, element);
+    console.log(`Altura total del documento:`, document.body.scrollHeight);
+    console.log(`Altura de la ventana:`, window.innerHeight);
 
     // Animación de scroll
     const easeInOutQuad = (t, b, c, d) => {
@@ -108,11 +149,14 @@
     const animateScroll = () => {
       const currentDate = +new Date();
       const currentTime = currentDate - startDate;
-      element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+      const newScrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+      console.log(`Animando scroll: tiempo=${currentTime}, scrollTop=${newScrollTop}`);
+      element.scrollTop = newScrollTop;
       if (currentTime < duration) {
         requestAnimationFrame(animateScroll);
       } else {
         element.scrollTop = to;
+        console.log(`Animación completada, posición final: ${element.scrollTop}`);
       }
     };
 
@@ -166,11 +210,11 @@
       case 'PlayPause':
         playPauseVideo();
         break;
-      case 'scrollUp':
-        scrollToTopSmooth();
+      case 'ScrollUp':
+        scrollUpIncremental();
         break;
-      case 'scrollDown':
-        scrollToBottomSmooth();
+      case 'ScrollDown':
+        scrollDownIncremental();
         break;
     }
   });
