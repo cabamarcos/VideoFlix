@@ -1,5 +1,15 @@
 # Videoflix
 
+<!-- academic-catalog:start -->
+**UC3M · 3.º curso · Sistemas interactivos y ubicuos**
+
+Plataforma de vídeos con mando remoto desde el móvil, funciones de voz, lectura fácil y pictogramas para facilitar la interacción.
+
+**Tecnologías:** JavaScript, Node.js, Socket.IO.
+
+[Ver todos mis proyectos académicos](https://github.com/cabamarcos/academic-projects)
+<!-- academic-catalog:end -->
+
 **Para poder acceder a la aplicación, primero tendrá que instalar node.js poniendo este código en la terminal dentro de la carpeta del proyecto:**
 
     npm install
